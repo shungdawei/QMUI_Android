@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 def cmd = 'git rev-list HEAD --count'
-def gitVersion = cmd.execute().text.trim().toInteger()
+//def gitVersion = cmd.execute().text.trim().toInteger()
 def javaVersion = JavaVersion.VERSION_1_8
 
 android {
@@ -32,7 +32,7 @@ android {
         applicationId "com.qmuiteam.qmuidemo"
         minSdkVersion parent.ext.minSdkVersion
         targetSdkVersion parent.ext.targetSdkVersion
-        versionCode gitVersion
+        versionCode 120//gitVersion
         versionName "1.2.0"
     }
     buildTypes {
